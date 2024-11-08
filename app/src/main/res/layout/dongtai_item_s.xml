@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:layout_margin="5sp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="动态标题"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_height="wrap_content"
+            android:text="nmae"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发布日期"/>
+        <TextView
+            android:id="@+id/releasetime"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_height="wrap_content"
+            android:text="nmae"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心情状态"/>
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_height="wrap_content"
+            android:text="nmae"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200sp"
+
+        android:layout_height="200sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="5sp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击数："/>
+        <TextView
+            android:id="@+id/clicks"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:layout_height="wrap_content"
+            android:text="nmae"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:text="点赞数："/>
+        <TextView
+            android:id="@+id/likes"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5sp"
+            android:layout_height="wrap_content"
+            android:text="nmae"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/date"
+        android:padding="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="date"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="5sp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/delbtn"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5sp"
+            android:padding="6sp"
+            android:textColor="@color/white"
+            android:background="#818181"
+            android:layout_height="wrap_content"
+            android:text="删除"/>
+
+        <TextView
+            android:id="@+id/detailbtn"
+            android:layout_width="100sp"
+            android:layout_marginLeft="5sp"
+            android:padding="6sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="#E3584E"
+            android:layout_height="wrap_content"
+            android:text="详情"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingTop="100sp"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/named"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="搜索活动名称"
+                android:inputType="text" />
+
+            <ImageView
+                android:id="@+id/searchbtn2"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@android:drawable/ic_menu_search" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/likestv"
+                android:padding="5sp"
+                android:layout_margin="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00BCD4"
+                android:textColor="@color/white"
+                android:text="点赞数正序" />
+
+            <TextView
+                android:id="@+id/clickstv"
+                android:padding="5sp"
+                android:layout_margin="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00BCD4"
+                android:textColor="@color/white"
+                android:text="点击数正序" />
+
+            <TextView
+                android:id="@+id/datetv"
+                android:padding="5sp"
+                android:layout_margin="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00BCD4"
+                android:textColor="@color/white"
+                android:text="发布时间正序"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

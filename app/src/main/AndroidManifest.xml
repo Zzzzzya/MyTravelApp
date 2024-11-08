@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zosoftware.tb">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_MEDIA_STORAGE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lvapp"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.user.CreateDongTaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.DongTaiListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.CollectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HuoDongDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.DongTaiDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.GongGaoDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.GongGaoListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.FormDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.dashboard.CreateFormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.AddCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.ZiliaoDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.ChangeUserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.ChangePassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.UserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.RegistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ForgetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.user.FavActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.HuoDongActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.DonTaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.ZiliaoListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="447dc6e1d21b6f00feeb9fdc076074c8" />
+
+        <service android:name="com.amap.api.location.APSService" />
+    </application>
+
+</manifest>

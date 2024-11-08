@@ -1,0 +1,82 @@
+plugins {
+    alias(libs.plugins.androidApplication)
+}
+
+android {
+    namespace 'com.zosoftware.tb'
+    compileSdk 34
+    sourceSets {
+        main {
+            jniLibs.srcDirs =['libs']
+        }
+    }
+    defaultConfig {
+        applicationId "com.zosoftware.tb"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            //设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","arm64-v8a","x86_64"
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        release {
+            keyAlias "key0"
+            keyPassword "test123"
+            storeFile file("../key.jks")
+            storePassword "test123"
+        }
+        debug {
+            keyAlias "key0"
+            keyPassword "test123"
+            storeFile file("../key.jks")
+            storePassword "test123"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    // define a BOM and its version
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
+
+    // define any required OkHttp artifacts without version
+    implementation("com.squareup.okhttp3:okhttp")
+    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.alibaba:fastjson:2.0.28'
+    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4"
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    implementation 'io.github.lucksiege:pictureselector:v3.11.2'
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.annotation
+    implementation libs.activity
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
